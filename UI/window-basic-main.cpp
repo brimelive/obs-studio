@@ -209,6 +209,7 @@ void assignDockToggle(QDockWidget *dock, QAction *action)
 
 extern void RegisterTwitchAuth();
 extern void RegisterRestreamAuth();
+extern void RegisterBrimeAuth();
 #if YOUTUBE_ENABLED
 extern void RegisterYoutubeAuth();
 #endif
@@ -228,6 +229,9 @@ OBSBasic::OBSBasic(QWidget *parent)
 #endif
 #if RESTREAM_ENABLED
 	RegisterRestreamAuth();
+#endif
+#if BRIME_ENABLED
+	RegisterBrimeAuth();
 #endif
 #if YOUTUBE_ENABLED
 	RegisterYoutubeAuth();
